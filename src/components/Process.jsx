@@ -14,7 +14,7 @@ const STEPS = [{
   index: '02',
   title: 'Architecture',
   duration: 'Week 1',
-  body: 'I design the system before writing a line of production code — data models, API contracts, infrastructure, and security boundaries. The result is software that scales cleanly instead of collapsing under its own weight.',
+  body: 'I design the data models and API structure first — Django models, endpoint contracts, and auth flow — before writing a single view. The result is a backend that doesn\'t need a rewrite three features in.',
   tags: ['System Design', 'Data Models', 'Security']
 }, {
   index: '03',

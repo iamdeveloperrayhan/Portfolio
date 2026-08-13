@@ -288,7 +288,7 @@ export default function NotFound() {
         <span className="text-[0.5rem] tracking-[0.2em] uppercase text-black/15 font-medium pt-6" style={{
         fontFamily: 'Satoshi, system-ui, sans-serif'
       }}>
-          © 2026 Abakwe Carrington · Cybersage
+          © 2026 Developer Rayhan · Bangladesh
         </span>
         <span className="text-[0.5rem] tracking-[0.18em] uppercase text-black/12 font-medium pt-6" style={{
         fontFamily: 'Satoshi, system-ui, sans-serif'

@@ -9,7 +9,7 @@ import { animate, createTimeline, scrambleText } from 'animejs';
 gsap.registerPlugin(ScrollTrigger);
 const SCRAMBLE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@_!∆';
 const EASE = [0.22, 1, 0.36, 1];
-const STACK_TAGS = ['AWS', 'Docker', 'Go', 'PostgreSQL', 'Redis', 'Next.js'];
+const STACK_TAGS = ['Python', 'Django', 'REST API', 'PostgreSQL', 'React', 'Next.js'];
 function runScramble(el, duration = 900, delay = 0) {
   animate(el, {
     innerHTML: scrambleText({
@@ -189,7 +189,7 @@ export function Hero() {
               color: '#D9D9D9',
               mixBlendMode: 'difference'
             }}>
-              Lagos, Nigeria · Remote Worldwide
+              Faridpur, Bangladesh · Remote Worldwide
             </span>
           </motion.div>
 
@@ -201,8 +201,8 @@ export function Hero() {
             color: '#FFFFFF',
             mixBlendMode: 'difference'
           }}>
-            <span ref={line1Ref} className="block cursor-default select-none">Abakwe</span>
-            <span ref={line2Ref} className="block cursor-default select-none">Carrington</span>
+            <span ref={line1Ref} className="block cursor-default select-none">Developer</span>
+            <span ref={line2Ref} className="block cursor-default select-none">Rayhan</span>
           </h1>
 
           {/* Italic serif tagline — auto-inverting like the name above it */}
@@ -215,7 +215,7 @@ export function Hero() {
             color: '#D9D9D9',
             mixBlendMode: 'difference'
           }}>
-            Infrastructure &amp; Systems Architect designing distributed platforms for regulated industries — from embedded edge to cloud.
+            Full Stack Developer building end‑to‑end web platforms with Python, Django &amp; React — from database design to deployed UI.
           </p>
 
           {/* Bottom row: stack + CTA */}
@@ -293,7 +293,7 @@ export function Hero() {
           color: '#D9D9D9',
           mixBlendMode: 'difference'
         }}>
-          Systems · Cloud · Distributed · Remote
+          Backend · Frontend · REST APIs · Remote
         </span>
       </div>
       </div>

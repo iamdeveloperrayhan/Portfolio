@@ -13,33 +13,18 @@ const BASE_URL = 'https://cybersage.dev';
 export const metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Abakwe Carrington — Software Engineer & Systems Architect (Lagos, Nigeria & Remote Worldwide)',
-    template: '%s | Abakwe Carrington — Infrastructure & Systems Architect'
+    default: 'Developer Rayhan — Full Stack Developer (Python, Django, React) — Bangladesh & Remote',
+    template: '%s | Developer Rayhan — Software Engineer & UI/UX Developer'
   },
-  description: 'Abakwe Carrington (Cybersage / Donrington) is a Software Engineer & Infrastructure Architect with 5+ years of experience designing high-availability distributed systems, cloud infrastructure (AWS, Docker, Kubernetes, Terraform), and Go & Django backends for global enterprises and startups worldwide.',
-  keywords: [
-  // Brand / name
-  'Abakwe Carrington', 'Carrington Abakwe', 'Cybersage', 'cybersage.dev', 'Cybersage developer', 'Donrington',
-  // Nigeria / Lagos geo cluster
-  'software engineer in Nigeria', 'software engineer in Lagos', 'software engineer Lagos Nigeria', 'best software engineer in Nigeria', 'top software engineers in Nigeria', 'top software engineer in Lagos', 'Nigerian software engineer', 'software developer in Nigeria', 'software developer in Lagos', 'web developer in Lagos Nigeria', 'backend engineer in Nigeria', 'DevOps engineer in Nigeria', 'cloud architect in Nigeria', 'systems architect in Lagos', 'hire software engineer in Nigeria', 'hire developer in Lagos', 'freelance software engineer Nigeria', 'remote software engineer Nigeria', 'top developers in Africa', 'African software engineer',
-  // Global & Remote Intent
-  'hire remote systems architect', 'remote infrastructure architect for hire', 'freelance cloud architect US UK Europe', 'senior backend engineer remote worldwide', 'Golang systems developer contract', 'AWS DevOps consultant remote', 'senior software architect for hire', 'distributed systems engineer remote',
-  // Role
-  'Infrastructure Architect', 'Systems Architect', 'Solutions Architect', 'Cloud Architect', 'Platform Engineer', 'Backend Architect', 'DevOps Engineer', 'Site Reliability Engineer', 'Software Engineer', 'Full Stack Engineer', 'Backend Engineer', 'Go Developer', 'Golang Developer', 'Django Developer', 'Next.js Developer', 'Python Developer',
-  // Hire intent
-  'hire systems architect', 'hire cloud architect', 'hire infrastructure architect', 'hire platform engineer', 'hire backend architect', 'hire software engineer', 'freelance solutions architect', 'freelance software engineer', 'remote systems architect for hire', 'contract architect', 'available for hire',
-  // Tech stack
-  'AWS', 'Docker', 'Kubernetes', 'Terraform', 'Go', 'Django', 'PostgreSQL', 'Redis', 'Next.js', 'distributed systems', 'system design', 'infrastructure as code', 'REST API development', 'Microservices', 'CI/CD', 'high availability architecture',
-  // Portfolio / reach
-  'Systems Architect portfolio', 'Cloud Architect portfolio', 'Software Engineer portfolio', 'remote developer worldwide', 'enterprise web development', 'scalable web applications', 'production-grade web systems', 'high-performance web apps',
-  // Niche specialisations
-  'AI engineer', 'computer vision developer', 'embedded systems developer', 'WebRTC developer', 'real-time systems engineer', 'HIPAA compliant development', 'AI surveillance system', 'regulated industries software'],
+  description: 'Developer Rayhan is a full stack developer specializing in Python, Django, REST APIs, and React/Next.js. Based in Bangladesh, available remote worldwide, with 20+ projects across backend and frontend development.',
+  keywords: ['Python developer', 'Django developer', 'Django REST Framework developer', 'full stack developer Bangladesh', 'React developer', 'Next.js developer', 'remote Python developer', 'JWT authentication', 'PostgreSQL developer'],
+  
   authors: [{
-    name: 'Abakwe Carrington',
+    name: 'Developer Rayhan',
     url: BASE_URL
   }],
-  creator: 'Abakwe Carrington',
-  publisher: 'Abakwe Carrington',
+  creator: 'Developer Rayhan',
+  publisher: 'Developer Rayhan',
   icons: {
     icon: [{
       url: '/favicon.ico',
@@ -62,32 +47,33 @@ export const metadata = {
   },
   openGraph: {
     type: 'profile',
-    firstName: 'Abakwe',
-    lastName: 'Carrington',
-    username: 'cybersage',
+    firstName: 'Developer',
+    lastName: 'Rayhan',
+    username: 'iamdeveloperrayhan',
     url: BASE_URL,
-    siteName: 'Cybersage — Abakwe Carrington',
-    title: 'Abakwe Carrington — Software Engineer & Systems Architect',
-    description: 'Software engineer & Infrastructure Architect in Lagos, Nigeria operating globally. 5+ years architecting distributed, production-grade systems. AWS · Docker · Go · Django · PostgreSQL · Redis. Available for hire worldwide.',
+    siteName: 'Developer Rayhan — Profile',
+    title: 'Developer Rayhan — Software Engineer & UI/UX Developer',
+    // Need to update here.
+    description: 'Software engineer & Infrastructure Architect in Faridpur, Dhaka, Bangladesh operating globally. 5+ years architecting distributed, production-grade systems. AWS · Docker · Go · Django · PostgreSQL · Redis. Available for hire worldwide.',
     locale: 'en_US',
     images: [{
       url: `${BASE_URL}/cybersage_og.png`,
       width: 1200,
       height: 630,
-      alt: 'Abakwe Carrington — Software Engineer & Systems Architect',
+      alt: 'Developer Rayhan — Software Engineer & Systems Architect & UI/UX Developer',
       type: 'image/png'
     }, {
       url: `${BASE_URL}/me.png`,
       width: 1393,
       height: 1149,
-      alt: 'Portrait of Abakwe Carrington, software engineer and systems architect based in Lagos, Nigeria',
+      alt: 'Portrait of Developer Rayhan, software engineer, UI/UX Developer and systems architect based in Faridpur, Dhaka, Bangladesh',
       type: 'image/png'
     }]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@CarlSwitch_CHUG',
-    creator: '@CarlSwitch_CHUG',
+    creator: '@devloperrayhan',
     title: 'Abakwe Carrington — Software Engineer & Systems Architect',
     description: 'Software engineer & Infrastructure Architect. 5+ years architecting production-grade distributed systems. AWS · Docker · Go · Django · PostgreSQL. Available worldwide.',
     images: [`${BASE_URL}/cybersage_og.png`]

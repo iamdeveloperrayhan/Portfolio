@@ -36,10 +36,6 @@ const NAV_LINKS = [{
   label: 'FAQ',
   href: '#faq-section',
   chevron: false
-}, {
-  label: 'Pricing',
-  href: 'https://cybersage.dev/pricing',
-  chevron: false
 }];
 const SPRING = {
   type: 'spring',
@@ -132,12 +128,15 @@ export function Navbar() {
           isolation: 'isolate'
         }}>
           {/* Logo — always left */}
-          <a href="#" className="flex items-center shrink-0 mr-3" aria-label="Cybersage">
+          {/* <a href="#" className="flex items-center shrink-0 mr-3" aria-label="Cybersage">
             <Image src="/sage/sage_horiz1_white.png" alt="Cybersage" width={200} height={50} priority className="block object-contain" style={{
               height: 46,
               width: 'auto'
             }} />
-          </a>
+          </a> */}
+          <span style={{ fontFamily: 'Satoshi, system-ui, sans-serif', fontWeight: 800, letterSpacing: '-0.02em', color: '#fff' }}>
+            Rayhan<span style={{ opacity: 0.4, fontWeight: 400 }}>.dev</span>
+          </span>
 
           {/* Separator */}
           <div className="h-5 w-px bg-white/12 shrink-0 mr-1" />
@@ -164,7 +163,7 @@ export function Navbar() {
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-auto">
 
           {/* Logo pill */}
-          <a href="#" className="flex items-center rounded-full px-4 py-2.5" style={{
+          {/* <a href="#" className="flex items-center rounded-full px-4 py-2.5" style={{
           backdropFilter: 'blur(28px)',
           WebkitBackdropFilter: 'blur(28px)',
           backgroundColor: 'rgba(10,10,10,0.95)',
@@ -175,7 +174,10 @@ export function Navbar() {
             height: 38,
             width: 'auto'
           }} />
-          </a>
+          </a> */}
+        <span style={{marginRight: '10px', fontFamily: 'Satoshi, system-ui, sans-serif', fontWeight: 800, letterSpacing: '-0.02em', color: '#fff' }}>
+          Rayhan<span style={{ opacity: 0.4, fontWeight: 400 }}>.dev</span>
+        </span>
 
           {/* Menu pill */}
           <button onClick={() => setMobileOpen(!mobileOpen)} className="flex items-center gap-2.5 rounded-full px-4 py-3" style={{

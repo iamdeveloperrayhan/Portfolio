@@ -6,37 +6,43 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 const EASE = [0.22, 1, 0.36, 1];
-const SERVICES = [{
-  index: '01',
-  title: 'Systems Architecture',
-  short: 'Design before code.',
-  body: 'Data models, service boundaries, API contracts, failure modes, and capacity planning — mapped before a line of production code. I deliver architectures teams can build on for years, with documentation that survives handover.',
-  keywords: ['System Design', 'Multi-Tenant', 'Event-Driven', 'Capacity Planning']
-}, {
-  index: '02',
-  title: 'Cloud Infrastructure & DevOps',
-  short: 'AWS · Docker · CI/CD.',
-  body: 'Container orchestration, GitHub Actions pipelines, zero-downtime deploys, environment management. I build infrastructure your team can actually understand — and rebuild from a single repo.',
-  keywords: ['AWS', 'Docker', 'GitHub Actions', 'Terraform']
-}, {
-  index: '03',
-  title: 'Distributed Backends & APIs',
-  short: 'Services that survive traffic spikes.',
-  body: 'Rate-limiting, idempotency keys, circuit breakers, JWT auth, connection pooling, caching strategies. Go and Django services engineered to fail gracefully instead of cascading.',
-  keywords: ['Go', 'Django', 'Redis', 'REST', 'WebSockets']
-}, {
-  index: '04',
-  title: 'Reliability & Performance',
-  short: "Find and fix what's slow.",
-  body: 'Database query analysis, p95 latency hunting, caching architecture review, Core Web Vitals improvement. I find bottlenecks and eliminate them with evidence.',
-  keywords: ['PostgreSQL', 'p95 Latency', 'Caching', 'Lighthouse']
-}, {
-  index: '05',
-  title: 'Full Stack Delivery',
-  short: 'When the system needs a face.',
-  body: 'Next.js front-ends, e-commerce with Stripe/Paystack, real-time dashboards — built on top of the architecture, not instead of it. From zero to production, end to end.',
-  keywords: ['Next.js', 'React', 'Stripe', 'PostgreSQL']
-}];
+const SERVICES = [
+  {
+    index: '01',
+    title: 'Backend Development',
+    short: 'APIs that hold up.',
+    body: 'Django & Django REST Framework backends with clean model design, authentication (JWT & session-based), and well-documented REST APIs — built to be easy for a frontend team to consume and for future-you to maintain.',
+    keywords: ['Django', 'DRF', 'REST API', 'JWT Auth']
+  },
+  {
+    index: '02',
+    title: 'Database Design',
+    short: 'Schemas that scale with the app.',
+    body: 'Relational schema design and query optimization across PostgreSQL, MySQL, and SQLite — normalized where it matters, indexed where it counts, migrations that don\u2019t break production.',
+    keywords: ['PostgreSQL', 'MySQL', 'SQLite', 'ORM']
+  },
+  {
+    index: '03',
+    title: 'Full Stack Web Apps',
+    short: 'From database to deployed UI.',
+    body: 'End-to-end delivery: Django backend, React or Next.js frontend, styled with Tailwind or Bootstrap. I own the whole flow — model, API, UI, deploy.',
+    keywords: ['Django', 'React', 'Next.js', 'Tailwind CSS']
+  },
+  {
+    index: '04',
+    title: 'Frontend Development',
+    short: 'Interfaces that feel right.',
+    body: 'Responsive, component-based UIs in React and Next.js (with Vite for lighter builds), styled cleanly with Tailwind CSS or Bootstrap and wired up to real APIs.',
+    keywords: ['React', 'Next.js', 'Vite', 'JavaScript']
+  },
+  {
+    index: '05',
+    title: 'Authentication & Security',
+    short: 'Sessions and tokens done right.',
+    body: 'JWT and Django session authentication, permissions, and role-based access — implemented the way Django actually intends it to be done, not bolted on.',
+    keywords: ['JWT', 'Session Auth', 'Django', 'Security']
+  }
+];
 
 /* ─── Toggle icon: two lines that morph into × ─────────────────────────── */
 function ToggleIcon({

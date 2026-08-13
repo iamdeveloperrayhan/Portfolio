@@ -330,7 +330,7 @@ export function Stack() {
         ease: EASE
       }}>
           {[{
-          target: 5,
+          target: 1,
           label: 'Years'
         }, {
           target: 50,

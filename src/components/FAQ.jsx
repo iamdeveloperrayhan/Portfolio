@@ -4,37 +4,44 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 const EASE = [0.22, 1, 0.36, 1];
-const FAQS = [{
-  id: 'who-is-abakwe',
-  category: 'Background',
-  question: 'Who is Abakwe Carrington?',
-  answer: 'Abakwe Carrington (also known as Cybersage or Donrington) is an Infrastructure & Systems Architect and Senior Software Engineer based in Lagos, Nigeria. Over the past 5+ years, he has designed, built, and operated high-availability distributed systems, cloud infrastructure (AWS, Docker, Kubernetes, Terraform), and Go & Django backends for global clients across North America, Europe, Australia, and Africa.'
-}, {
-  id: 'services-offered',
-  category: 'Services',
-  question: 'What engineering services does Cybersage offer?',
-  answer: 'Abakwe Carrington specializes in four core areas: 1) Systems Architecture & System Design (blueprinting microservice boundaries and database schemas), 2) Cloud Infrastructure & DevOps (AWS setups, IaC with Terraform, Docker containerisation, and automated zero-downtime CI/CD pipelines), 3) Distributed Backend & API Engineering (Go and Django services with rate-limiting and caching), and 4) Full Stack Web Engineering (high-performance Next.js and React web apps).'
-}, {
-  id: 'remote-global',
-  category: 'Location & Remote',
-  question: 'Does Abakwe Carrington work with international clients remotely?',
-  answer: 'Yes, absolutely. While based in Lagos, Nigeria (WAT / GMT+1), Abakwe works seamlessly with startups, scale-ups, and enterprises worldwide across US, UK, European, Canadian, and Australian time zones.'
-}, {
-  id: 'wytnest-platform',
-  category: 'Featured Project',
-  question: 'What is Wytnest and how does it work?',
-  answer: 'Wytnest is a video and written testimonial platform built by Abakwe Carrington. It isolates embeddable video widgets using Shadow DOM technology to guarantee zero style leakage on client websites. It features automated AI speech-to-text transcription to convert video reviews into searchable quotes, and supports multi-currency billing (USD & NGN) via Stripe and Paystack.'
-}, {
-  id: 'tech-stack',
-  category: 'Technology Stack',
-  question: 'What is Abakwe Carrington’s primary technology stack?',
-  answer: 'Core stack includes AWS, Docker, Kubernetes, Terraform, Go (Golang), Python (Django, FastAPI), PostgreSQL, Redis, Next.js, React, and TypeScript. He also has expertise in WebRTC streaming, OpenCV computer vision, HIPAA-compliant security architecture, and timeseries data.'
-}, {
-  id: 'how-to-hire',
-  category: 'Engagement',
-  question: 'How can I hire or contact Abakwe Carrington for a project?',
-  answer: 'You can reach out directly via email at abakwecarrington@gmail.com, connect on LinkedIn or Twitter (@CarlSwitch_CHUG), or send a message through the contact section below. He is available for remote full-time engineering roles, contract infrastructure work, and system architecture consulting.'
-}];
+const FAQS = [
+  {
+    id: 'who-is-rayhan',
+    category: 'Background',
+    question: 'Who is Developer Rayhan?',
+    answer: 'Developer Rayhan is a full stack developer based in Faridpur, Dhaka, Bangladesh, working remotely. Early in his career, he has built 20+ personal and practice projects covering backend APIs, databases, and full web applications using Python, Django, and React/Next.js.'
+  },
+  {
+    id: 'services-offered',
+    category: 'Services',
+    question: 'What does Developer Rayhan work on?',
+    answer: 'Backend development with Django and Django REST Framework, database design across PostgreSQL, MySQL, and SQLite, and frontend development with React, Next.js, and Tailwind CSS or Bootstrap — end-to-end full stack builds.'
+  },
+  {
+    id: 'remote-global',
+    category: 'Location & Remote',
+    question: 'Does he work with international clients remotely?',
+    answer: 'Yes — based in Bangladesh, fully open to remote work with clients and teams worldwide.'
+  },
+  {
+    id: 'experience-level',
+    category: 'Experience',
+    question: 'How much experience does he have?',
+    answer: 'He\u2019s early career — around a year of hands-on development — but has built a substantial portfolio of 20+ self-directed projects to develop real, production-style skills across the full stack.'
+  },
+  {
+    id: 'tech-stack',
+    category: 'Technology Stack',
+    question: 'What is his primary tech stack?',
+    answer: 'Python and Django (with Django REST Framework) on the backend, PostgreSQL/MySQL/SQLite for databases, and React, Next.js, JavaScript, Tailwind CSS, and Bootstrap on the frontend. Also comfortable with Node.js and C++.'
+  },
+  {
+    id: 'how-to-hire',
+    category: 'Engagement',
+    question: 'How can I get in touch?',
+    answer: 'Email iamdeveloperrayhan@gmail.com or use the contact form below. Open to internships, junior roles, and freelance work.'
+  }
+];
 export function FAQ() {
   const sectionRef = useRef(null);
   const sectionInView = useInView(sectionRef, {

@@ -89,8 +89,7 @@ export default function Image() {
         maxWidth: '560px',
         margin: '6px 0 0'
       }}>
-            Software engineer &amp; systems architect in Lagos, Nigeria — 5+ years
-            architecting distributed, production-grade systems. Available for hire worldwide.
+            Software Engineer & UI/UX Developer based in Faridpur, Bangladesh ——— specializing in building modern, production-grade web experiences from concept to completion. With 1+ years of hands-on development experience, I’m available for freelance and remote opportunities worldwide.
           </p>
         </div>
 

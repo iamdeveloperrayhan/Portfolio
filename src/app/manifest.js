@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: 'Cybersage — Abakwe Carrington | Software Engineer & Systems Architect, Lagos, Nigeria',
-    short_name: 'Cybersage',
+    name: 'iamdeveloperrayhan — Developer Rayhan | Software Engineer, UI/UX Developer & Systems Architect, Faridpur, Dhaka, Bangladesh',
+    short_name: 'Rayhan',
     description: 'Portfolio of Abakwe Carrington — software engineer and Infrastructure & Systems Architect based in Lagos, Nigeria. Available for hire worldwide.',
     id: '/',
     start_url: '/',

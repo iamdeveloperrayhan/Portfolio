@@ -6,34 +6,19 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
-const STATS = [{
-  label: 'Years of Experience',
-  target: 5,
-  suffix: '+'
-}, {
-  label: 'Projects Shipped',
-  target: 50,
-  suffix: '+'
-}, {
-  label: 'Global Clients',
-  target: 40,
-  suffix: '+'
-}, {
-  label: 'Countries Served',
-  target: 8,
-  suffix: ''
-}];
-const COUNTRIES = ['Nigeria', 'United States', 'Canada', 'United Kingdom', 'Australia', 'India', 'Ghana', 'Kenya'];
-const QUOTE_WORDS = ['I', 'architect', 'systems', 'that', "don’t", 'just', 'work', '—', 'they', 'scale,', 'survive', 'failure,', 'and', 'stay', 'clean', 'under', 'pressure.'];
+const STATS = [
+  { label: 'Years Learning & Building', target: 1, suffix: '+' },
+  { label: 'Projects Built', target: 20, suffix: '+' },
+  { label: 'Technologies Used', target: 12, suffix: '+' },
+  { label: 'GitHub Repositories', target: 20, suffix: '+' },
+];
+const COUNTRIES = ['Python', 'Django', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'MySQL', 'C++'];
+const QUOTE_WORDS = ['I', 'build', 'things', 'that', 'work', '—', 'clean', 'APIs,', 'solid', 'databases,', 'and', 'interfaces', 'people', 'actually', 'enjoy', 'using.'];
 const EASE = [0.22, 1, 0.36, 1];
 
 /* Smooth count-up, fires once on scroll into view */
-function CountUp({
-  target,
-  suffix,
-  inView,
-  delay = 0
-}) {
+function CountUp({ target, suffix, inView, delay = 0 }) {
+
   const [display, setDisplay] = useState(0);
   const count = useMotionValue(0);
   const started = useRef(false);
@@ -48,16 +33,15 @@ function CountUp({
       onUpdate: v => setDisplay(Math.round(v))
     });
     return () => ctrl.stop();
-    
+
   }, [inView, target, count, delay]);
 
   return <>{display}{suffix}</>;
 }
 
 /* Word-by-word animated pull quote */
-function AnimatedQuote({
-  inView
-}) {
+function AnimatedQuote({ inView }) {
+
   return <p style={{
     fontFamily: 'var(--font-instrument), Georgia, serif',
     fontStyle: 'italic',
@@ -88,6 +72,7 @@ function AnimatedQuote({
     &rdquo;
   </p>;
 }
+
 export function About() {
   const sectionRef = useRef(null);
   const statsRef = useRef(null);
@@ -254,7 +239,7 @@ export function About() {
             <p className="text-[0.7rem] font-semibold tracking-[0.18em] uppercase text-black/35 mb-4" style={{
               fontFamily: 'Satoshi, system-ui, sans-serif'
             }}>
-              Shipped across
+              Core Stack
             </p>
             <div className="flex flex-wrap gap-2">
               {COUNTRIES.map((country, i) => <motion.span key={country} initial={{
@@ -297,18 +282,14 @@ export function About() {
               fontWeight: 400,
               fontSize: 'clamp(1.05rem, 1.5vw, 1.3rem)'
             }}>
-              A software engineer based in Lagos, Nigeria — 5+ years designing and running
-              production systems for global clients: multi-tenant compliance platforms, HIPAA
-              medical portals, high-traffic marketplaces. I own the system end-to-end:
-              architecture, infrastructure, backend, delivery.
+              A full stack developer based in Faridpur, Dhaka, Bangladesh — early in my career but self-driven, with 20+ personal and practice projects covering backend systems, REST APIs, and full web applications, UI/UX. I build the whole stack: database schema, backend logic, and the interface on top.
             </p>
             <p className="text-black/40 leading-relaxed" style={{
               fontFamily: 'Satoshi, system-ui, sans-serif',
               fontWeight: 400,
               fontSize: 'clamp(1rem, 1.3vw, 1.15rem)'
             }}>
-              Core: AWS, Docker, Go, Django, PostgreSQL, Redis, CI/CD. Fluent in Next.js for
-              when the system needs a face. I care about the whole system — not just the feature.
+              Core: Python, Django, Django REST Framework, PostgreSQL, MySQL, SQLite. Comfortable with Node.js and C++ too. On the frontend: React, Next.js, JavaScript, Tailwind CSS, and Bootstrap. I care about writing code that's easy to read a year later.
             </p>
 
             <motion.div className="flex gap-4 pt-2" initial={{
@@ -320,12 +301,12 @@ export function About() {
               delay: 0.8,
               ease: EASE
             }}>
-              <a href="https://github.com/Donrington" target="_blank" rel="noopener noreferrer" className="text-[0.65rem] tracking-[0.18em] uppercase font-medium text-black/40 hover:text-black border-b border-black/20 hover:border-black pb-px transition-colors" style={{
+              <a href="https://github.com/iamdeveloperrayhan" target="_blank" rel="noopener noreferrer" className="text-[0.65rem] tracking-[0.18em] uppercase font-medium text-black/40 hover:text-black border-b border-black/20 hover:border-black pb-px transition-colors" style={{
                 fontFamily: 'Satoshi, system-ui, sans-serif'
               }}>
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/carrington-abakwe-b0b0a0217" target="_blank" rel="noopener noreferrer" className="text-[0.65rem] tracking-[0.18em] uppercase font-medium text-black/40 hover:text-black border-b border-black/20 hover:border-black pb-px transition-colors" style={{
+              <a href="https://www.linkedin.com/in/iamdeveloperrayhan" target="_blank" rel="noopener noreferrer" className="text-[0.65rem] tracking-[0.18em] uppercase font-medium text-black/40 hover:text-black border-b border-black/20 hover:border-black pb-px transition-colors" style={{
                 fontFamily: 'Satoshi, system-ui, sans-serif'
               }}>
                 LinkedIn
@@ -334,9 +315,8 @@ export function About() {
           </motion.div>
 
           {/* Headshot — GSAP clip reveal */}
-          <div ref={imageRef} className="relative aspect-4/3 w-full overflow-hidden bg-black/4">
-            <Image src="/me.png" alt="Abakwe Carrington — software engineer and Infrastructure & Systems Architect based in Lagos, Nigeria" fill className="object-cover object-top grayscale" sizes="(max-width: 1024px) 100vw, 50vw" />
-            <div className="absolute inset-0 mix-blend-multiply bg-white/10" />
+          <div ref={imageRef} className="relative aspect-3/4 w-full overflow-hidden bg-black/4">
+            <Image src="/me.png" alt="Developer Rayhan — full stack developer" fill className="object-cover object-top grayscale" sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const EASE = [0.22, 1, 0.36, 1];
 
 // ─── Floating background vocabulary ───────────────────────────────────────────
-const FLOAT_WORDS = ['Certified', 'Verified', '2025', 'Architecture', 'IBT Learning', '2024', 'Moat Academy', 'Zidio', 'Engineering', 'Infrastructure', 'Systems', 'Cloud', 'Internship', 'PostgreSQL', 'Accredited', 'Remote', 'Awarded', 'Completed', '5+ Years', 'Production'];
+const FLOAT_WORDS = ['Python', 'Django', 'REST API', '2026', 'PostgreSQL', 'React', 'Self-Taught', 'Learning', 'Building', 'Remote', '20+ Projects', 'Open Source'];
 function sr(seed) {
   const x = Math.sin(seed * 9301 + 49297) * 233280;
   return x - Math.floor(x);
@@ -50,21 +50,21 @@ function buildFloatItems() {
 }
 const CERTIFICATIONS = [{
   num: '01',
-  title: 'Full Stack Engineering',
-  issuer: 'IBT Learning',
-  year: '2025',
+  title: 'Full Stack Developer',
+  issuer: 'Ostad',
+  year: '2026',
   file: '/certificates/Carrington Abakwe - 2025-08-04 - Full stack engineering Certificate (IBT Learning).pdf'
 }, {
   num: '02',
-  title: 'Web Application Development',
-  issuer: 'Moat Academy',
+  title: 'UI/UX Developer',
+  issuer: 'Ostad',
   year: '2024',
   file: '/certificates/Abakwe Carrington - Web application development (Moat Academy).jpeg'
 }, {
   num: '03',
   title: 'Web Development Internship',
-  issuer: 'Zidio Development',
-  year: '2024',
+  issuer: 'Ostad',
+  year: '2025',
   file: '/certificates/Zidio Development - Web Devlopment Internship.jpeg'
 }];
 
@@ -691,7 +691,7 @@ export function Credentials() {
               duration: 0.55,
               ease: EASE
             }}>
-                Infrastructure &amp; Systems Architect — 5+ years · Remote
+               Software engineer &amp; UI/ UX Developer, Systems Architect — 1+ years · Remote
               </motion.p>
 
               {/* Stack tags */}

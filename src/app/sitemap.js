@@ -6,6 +6,7 @@ export default function sitemap() {
     lastModified: currentDate,
     changeFrequency: 'weekly',
     priority: 1.0,
+    // Need to chagne and apply my Images.
     images: [`${BASE_URL}/me.png`, `${BASE_URL}/cybersage_og.png`, `${BASE_URL}/sage/icon-512.png`, `${BASE_URL}/hero_image.png`, `${BASE_URL}/projects/axflo.png`, `${BASE_URL}/projects/anoc.png`, `${BASE_URL}/projects/chronos.png`, `${BASE_URL}/projects/autoboy.png`, `${BASE_URL}/projects/nextgen.png`, `${BASE_URL}/projects/recoverderm.png`, `${BASE_URL}/projects/amanigo.png`, `${BASE_URL}/projects/techhub.png`]
   }, {
     url: `${BASE_URL}/llms.txt`,

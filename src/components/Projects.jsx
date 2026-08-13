@@ -9,174 +9,88 @@ import { ArrowUpRight } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
-const PROJECTS = [{
-  id: 'autoboy',
-  name: 'Autoboy Express',
-  category: 'B2B / B2C Marketplace',
-  tagline: 'Dual-sided automotive marketplace on Go microservices. Real-time inventory, Redis-cached feeds, React seller dashboard. 30% DB latency reduction.',
-  stack: ['React', 'Go', 'PostgreSQL', 'Redis'],
-  image: '/projects/autoboy.png',
-  year: '2025',
-  link: 'https://autoboyexpress.com'
-}, {
-  id: 'recoverderm',
-  name: 'RecoverDerm',
-  category: 'Paramedical Platform',
-  tagline: 'Full stack for a paramedical clinic. Secure patient portals, treatment tracking, headless CMS. JWT + refresh token rotation, HIPAA-compliant.',
-  stack: ['Next.js', 'Django', 'PostgreSQL'],
-  image: '/projects/recoverderm.png',
-  year: '2026',
-  link: 'https://recoverderm.ca'
-}, {
-  id: 'anoc',
-  name: 'Anoc.ng',
-  category: 'Audit / Finance',
-  tagline: 'Platform for Chartered Accountants to handle compliance, manage documents, and keep audit records clean. Encrypted pipelines, zero breaches.',
-  stack: ['Next.js', 'Node.js', 'PostgreSQL'],
-  image: '/projects/anoc.png',
-  year: '2025',
-  link: 'https://anoc.ng'
-}, {
-  id: 'wytnest',
-  name: 'Wytnest',
-  category: 'Testimonial SaaS',
-  tagline: 'Multi-tenant testimonial platform — campaigns, video via Cloudflare Stream, shadow DOM widget embeds, and idempotent dual-rail payments: Paystack NGN + Stripe USD.',
-  stack: ['Next.js', 'Supabase', 'Cloudflare', 'Paystack', 'Stripe'],
-  image: '/projects/wytnest_hero.png',
-  year: '2026',
-  link: 'https://wytnest.vercel.app'
-}, {
-  id: 'nextgen',
-  name: 'NextGen Robotics',
-  category: 'Automation Hub',
-  tagline: 'Web platform and cloud deployment for a robotics company. CI/CD automation, Go backend, AWS. 25% user engagement lift post-launch.',
-  stack: ['Next.js', 'Go', 'AWS', 'Docker'],
-  image: '/projects/nextgen.png',
-  year: '2025',
-  link: 'https://nextgenerationrobotics.org'
-}, {
-  id: 'axflo',
-  name: 'Axflo Oil & Gas',
-  category: 'Enterprise CMS',
-  tagline: 'Headless CMS for an oil & gas company with workflow automation, document generation, and role-based access. Cut manual ops by 60%.',
-  stack: ['Next.js', 'Django', 'PostgreSQL'],
-  image: '/projects/axflo.png',
-  year: '2025',
-  link: 'https://axfloo.com'
-}, {
-  id: 'samdus',
-  name: 'Samdus Oil & Gas',
-  category: 'Corp Portfolio',
-  tagline: 'Corporate site for an oil & gas company. Custom GSAP animations, SEO-first build, 98/100 on Lighthouse. Sub-1s LCP.',
-  stack: ['Next.js', 'Django'],
-  image: '/projects/samdus1_1.jpg',
-  year: '2024',
-  link: 'https://samdus.com'
-}, {
-  id: 'deets',
-  name: 'Deets',
-  category: 'Industrial System',
-  tagline: 'Manufacturing platform with real-time production tracking, compliance workflows, and WebSocket-powered reporting.',
-  stack: ['React', 'Node.js', 'PostgreSQL'],
-  image: '/projects/deets.png',
-  year: '2025',
-  link: 'https://deetsnigeria.org'
-}, {
-  id: 'handyman',
-  name: 'All A Handyman',
-  category: 'Lead Generation',
-  tagline: 'Lead gen site for a home services company. Conversion-tuned landing pages, qualified inquiries tripled post-launch.',
-  stack: ['React', 'Node.js', 'Tailwind'],
-  image: '/projects/handyman3.jpg',
-  year: '2024'
-}, {
-  id: 'twerk',
-  name: 'Twerk Queen Lagos',
-  category: 'Event Portfolio',
-  tagline: 'Event portfolio for a professional performer. GSAP showcase, booking engine, 60fps scroll animations, sub-800ms FCP.',
-  stack: ['Next.js', 'Tailwind', 'GSAP'],
-  image: '/projects/twerkqueenlagos.jpg',
-  year: '2024'
-}, {
-  id: 'chrisconteras',
-  name: 'Chris Conteras',
-  category: 'Cleaning Agency',
-  tagline: 'Lead gen site for a Texas cleaning agency. SEO-first build, optimised inquiry funnels, qualified bookings up since launch.',
-  stack: ['Next.js', 'Tailwind', 'SEO'],
-  image: '/projects/chrisconteras.png',
-  year: '2025',
-  link: 'https://chriscleanstexas.com'
-}, {
-  id: 'myrakeleher',
-  name: 'Myra Keleher',
-  category: 'Cleaning Agency',
-  tagline: 'Cleaning agency site for Florida. Service showcase, instant quote flow, form completion up 40%.',
-  stack: ['React', 'Node.js', 'Tailwind'],
-  image: '/projects/myrakeleher.png',
-  year: '2025',
-  link: 'https://myrakelehercleaning.com'
-}, {
-  id: 'techhub',
-  name: 'TechHub',
-  category: 'Dev Community',
-  tagline: 'Open source dev community. Project showcases, resource sharing, real-time activity feeds.',
-  stack: ['React', 'Node.js', 'PostgreSQL'],
-  image: '/projects/techhub.png',
-  year: '2023',
-  link: 'https://github.com/Donrington/techhub'
-}, {
-  id: 'amanigo',
-  name: 'Amanigo Travels',
-  category: 'Travel Mgmt App',
-  tagline: 'Travel management app with booking engine, itinerary builder, and integrations with global travel providers. Idempotent payments.',
-  stack: ['Next.js', 'Django', 'PostgreSQL'],
-  image: '/projects/amanigo.png',
-  year: '2024'
-}, {
-  id: 'rokeyla',
-  name: 'Rokeyla Fashion',
-  category: 'Ecommerce',
-  tagline: 'E-commerce platform for a fashion brand. Stripe integration, live inventory sync via pg_notify, scales with traffic.',
-  stack: ['Next.js', 'Stripe', 'PostgreSQL'],
-  image: '/projects/rokeyla.jpg',
-  year: '2024'
-}, {
-  id: 'krkmotors',
-  name: 'KRK Motors',
-  category: 'Brand Site',
-  tagline: 'Brand site for a premium auto dealership. GSAP animations, sub-1s load time, clean automotive aesthetic.',
-  stack: ['Next.js', 'GSAP', 'Tailwind'],
-  image: '/projects/krkmotors.png',
-  year: '2024',
-  link: 'https://krk-motors.vercel.app'
-}, {
-  id: 'tuantling',
-  name: 'Tuan Tling Vinyl Flooring',
-  category: 'Home Services',
-  tagline: 'SEO-optimised service platform for a vinyl flooring specialist. Service showcase, quote request funnels, sub-1s LCP.',
-  stack: ['Next.js', 'Tailwind', 'SEO'],
-  image: '/projects/tuantling.png',
-  year: '2026',
-  link: 'https://tuantlingvinylflooring.com'
-}, {
-  id: 'chronos',
-  name: 'Chronos',
-  category: 'Ambient AI Platform',
-  tagline: 'Adaptive ambient display system powered by Google Gemini. Auto-tags images with AI, scores content by time-of-day, mood, and context. Cloudinary-backed storage with user feedback loop.',
-  stack: ['Python', 'Streamlit', 'PostgreSQL', 'Gemini AI'],
-  image: '/projects/chronos.png',
-  year: '2026',
-  link: 'https://thechronosaura.com'
-}, {
-  id: 'circlesoflife',
-  name: 'Circles of Life Healthcare',
-  category: 'Healthcare + AI Platform',
-  tagline: 'Marketing site, admin CMS, and a four-feature Claude-powered care-advisor suite for an Atlanta in-home care provider. Streaming AI chat, care assessment, applicant auto-scoring, Supabase RLS.',
-  stack: ['Next.js', 'Supabase', 'Claude AI', 'GSAP'],
-  image: '/logo/colhcs.png',
-  year: '2026',
-  link: 'https://circlesoflifehcs.com'
-}];
+const PROJECTS = [
+  {
+    id: 'django-ecommerce-store',
+    name: 'Django Ecommerce Store',
+    category: 'Ecommerce Backend',
+    tagline: 'Full Django-powered ecommerce backend — product catalog, cart, orders, and admin management with a clean REST API.',
+    stack: ['Python', 'Django', 'PostgreSQL', 'DRF'],
+    image: '/projects/django-ecommerce-store.png',
+    year: '2026',
+    link: 'https://github.com/iamdeveloperrayhan/django-ecommerce-store'
+  },
+  {
+    id: 'django-ecommerce-frontend',
+    name: 'Django Ecommerce Frontend',
+    category: 'Ecommerce Frontend',
+    tagline: 'React/Next.js storefront consuming the Django ecommerce API — product browsing, cart, and checkout flow.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'jQuery'],
+    image: '/projects/django-ecommerce-frontend.png',
+    year: '2025',
+    link: 'https://github.com/iamdeveloperrayhan/django-ecommerce-frontend'
+  },
+  {
+    id: 'hospital-appointment-api',
+    name: 'Hospital Appointment Management API',
+    category: 'Healthcare API',
+    tagline: 'REST API for scheduling hospital appointments — patients, doctors, availability, and booking logic built with Django REST Framework.',
+    stack: ['Django', 'DRF', 'PostgreSQL', 'JWT'],
+    image: '/projects/hospital-appointment-api.png',
+    year: '2026',
+    link: 'https://github.com/iamdeveloperrayhan/hospital-appointment-management-api'
+  },
+  {
+    id: 'nexus-explorer',
+    name: 'Nexus Explorer',
+    category: 'AI Dashboard',
+    tagline: 'Character intelligence dashboard — an interactive data-exploration interface for tracking and analyzing character-driven datasets.',
+    stack: ['React', 'JavaScript', 'Tailwind CSS', 'React Router'],
+    image: '/projects/nexus-explorer.png',
+    year: '2026',
+    link: 'https://github.com/iamdeveloperrayhan/Nexus-Explorer-Character-Intelligence-Dashboard'
+  },
+  {
+    id: 'medicare-dashboard',
+    name: 'Medicare Dashboard',
+    category: 'Healthcare Dashboard',
+    tagline: 'Admin dashboard for managing patient and healthcare data with a clean, data-dense interface.',
+    stack: ['React', 'Django', 'PostgreSQL'],
+    image: '/projects/medicare-dashboard.png',
+    year: '2026',
+    link: 'https://github.com/iamdeveloperrayhan/medicare-dashboard'
+  },
+  {
+    id: 'dimension-flap',
+    name: 'Dimension Flap',
+    category: 'Web Game',
+    tagline: 'A retro-inspired Flappy Bird-style game built with HTML, CSS, and JavaScript. Features two unique themes (Night & Desert), smooth gameplay, score tracking, responsive controls, and pixel-art visuals.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    image: '/projects/dimension-flap.png',
+    year: '2026',
+    link: 'https://github.com/iamdeveloperrayhan/dimension-flap'
+  },
+  {
+    id: 'python-snake-game',
+    name: 'Python Snake Game',
+    category: 'Web Game',
+    tagline: 'A classic Snake Game built with Python and Pygame, featuring smooth gameplay, random food generation, score tracking, and keyboard controls.',
+    stack: ['Python'],
+    image: '/projects/python-snake-game.png',
+    year: '2026',
+    link: 'https://github.com/iamdeveloperrayhan/python-snake-game'
+  },
+  {
+    id: 'student-record-management-system',
+    name: 'Student Record Management System',
+    category: 'Command-Line Interface (CLI)',
+    tagline: 'A command-line Student Record Management System built with Python. Manage student records with add, view, search, delete, file persistence, input validation, and modular architecture using only Python standard libraries.',
+    stack: ['Python'],
+    image: '/projects/student-record-management-system.png',
+    year: '2026',
+    link: 'https://github.com/iamdeveloperrayhan/student-record-management-system'
+  }
+];
 // ─── Cube geometry ─────────────────────────────────────────────────────────────
 // Scene 0 = intro, scenes 1–16 = projects
 const SCENE_COUNT = PROJECTS.length + 1;
