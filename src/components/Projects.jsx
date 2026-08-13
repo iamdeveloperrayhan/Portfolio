@@ -21,16 +21,6 @@ const PROJECTS = [
     link: 'https://github.com/iamdeveloperrayhan/django-ecommerce-store'
   },
   {
-    id: 'django-ecommerce-frontend',
-    name: 'Django Ecommerce Frontend',
-    category: 'Ecommerce Frontend',
-    tagline: 'React/Next.js storefront consuming the Django ecommerce API — product browsing, cart, and checkout flow.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'jQuery'],
-    image: '/projects/django-ecommerce-frontend.png',
-    year: '2025',
-    link: 'https://github.com/iamdeveloperrayhan/django-ecommerce-frontend'
-  },
-  {
     id: 'hospital-appointment-api',
     name: 'Hospital Appointment Management API',
     category: 'Healthcare API',
@@ -61,6 +51,16 @@ const PROJECTS = [
     link: 'https://github.com/iamdeveloperrayhan/medicare-dashboard'
   },
   {
+    id: 'django-ecommerce-frontend',
+    name: 'Django Ecommerce Frontend',
+    category: 'Ecommerce Frontend',
+    tagline: 'React/Next.js storefront consuming the Django ecommerce API — product browsing, cart, and checkout flow.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'jQuery'],
+    image: '/projects/django-ecommerce-frontend.png',
+    year: '2025',
+    link: 'https://github.com/iamdeveloperrayhan/django-ecommerce-frontend'
+  },
+  {
     id: 'dimension-flap',
     name: 'Dimension Flap',
     category: 'Web Game',
@@ -71,24 +71,44 @@ const PROJECTS = [
     link: 'https://github.com/iamdeveloperrayhan/dimension-flap'
   },
   {
-    id: 'python-snake-game',
-    name: 'Python Snake Game',
-    category: 'Web Game',
-    tagline: 'A classic Snake Game built with Python and Pygame, featuring smooth gameplay, random food generation, score tracking, and keyboard controls.',
-    stack: ['Python'],
-    image: '/projects/python-snake-game.png',
-    year: '2026',
-    link: 'https://github.com/iamdeveloperrayhan/python-snake-game'
+    id: 'finix-landing-page',
+    name: 'Finix Landing Page',
+    category: 'Landing Page',
+    tagline: 'A responsive clone of the Finix landing page built using HTML5, CSS3, Bootstrap 5, and JavaScript for learning and portfolio purposes.',
+    stack: ['HTML5', 'CSS3', 'Bootstrap 5'],
+    image: '/projects/finix-landing-page.png',
+    year: '2024',
+    link: 'https://github.com/iamdeveloperrayhan/finix-landing-page'
   },
   {
-    id: 'student-record-management-system',
-    name: 'Student Record Management System',
-    category: 'Command-Line Interface (CLI)',
-    tagline: 'A command-line Student Record Management System built with Python. Manage student records with add, view, search, delete, file persistence, input validation, and modular architecture using only Python standard libraries.',
-    stack: ['Python'],
-    image: '/projects/student-record-management-system.png',
-    year: '2026',
-    link: 'https://github.com/iamdeveloperrayhan/student-record-management-system'
+    id: 'interactive-clock',
+    name: 'Interactive Clock',
+    category: 'Web Animation',
+    tagline: 'A modern interactive analog clock built with HTML, CSS, and JavaScript featuring customizable themes, clock size control, and dynamic colors.',
+    stack: ['HTML5', 'CSS3', 'JavaScript'],
+    image: '/projects/interactive-clock.png',
+    year: '2024',
+    link: 'https://github.com/iamdeveloperrayhan/interactive-clock'
+  },
+  {
+    id: 'sms-otp-website-clone',
+    name: 'SMS OTP Website Clone',
+    category: 'Send Mail',
+    tagline: 'Responsive SMS OTP service landing page clone built with HTML, CSS, and JavaScript. Created for frontend practice and portfolio purposes.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'jQuery'],
+    image: '/projects/sms-otp-website-clone.png',
+    year: '2025',
+    link: 'https://github.com/iamdeveloperrayhan/sms-otp-website-clone'
+  },
+  {
+    id: 'appAMP-theme-clone',
+    name: 'AppAMP Theme Clone',
+    category: 'App Detail Web Page',
+    tagline: 'Responsive AppAMP-inspired landing page clone built with HTML, CSS, and JavaScript. Created for frontend practice, responsive layout, and UI development.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Vanilla JavaScript', 'Clean UI'],
+    image: '/projects/appAMP-theme-clone.png',
+    year: '2024',
+    link: 'https://github.com/iamdeveloperrayhan/appAMP-theme-clone'
   }
 ];
 // ─── Cube geometry ─────────────────────────────────────────────────────────────
@@ -619,7 +639,7 @@ export function Projects() {
               })
             }}>
                   {faceImages[fi] !== null && <>
-                      <Image src={PROJECTS[faceImages[fi]].image} alt={PROJECTS[faceImages[fi]].name} fill className="object-cover" quality={90} sizes="(max-width: 768px) 90vw, 1400px" />
+                      <Image src={PROJECTS[faceImages[fi]].image} alt={PROJECTS[faceImages[fi]].name} fill className="object-cover object-top" quality={90} sizes="(max-width: 768px) 90vw, 1400px" />
                       <div style={{
                   position: 'absolute',
                   inset: 0,
