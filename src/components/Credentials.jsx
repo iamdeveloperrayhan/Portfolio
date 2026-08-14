@@ -346,11 +346,11 @@ function GitHubActivity({
               {loading ? 'Fetching activity…' : unavailable ? 'GitHub · rate limited' : `Active ${data?.lastActive ?? 'recently'}`}
             </span>
           </div>
-          <a href="https://github.com/Donrington" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/25 hover:text-white/60 transition-colors duration-200">
+          <a href="https://github.com/iamdeveloperrayhan" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/25 hover:text-white/60 transition-colors duration-200">
             <span className="text-[0.55rem] tracking-[0.18em] uppercase" style={{
             fontFamily: 'Satoshi, system-ui, sans-serif'
           }}>
-              @Donrington
+              @iamdeveloperrayhan
             </span>
             <ExternalLink size={10} />
           </a>
@@ -672,7 +672,7 @@ export function Credentials() {
                 duration: 0.75,
                 ease: EASE
               }}>
-                  Abakwe Carrington
+                  Developer Rayhan
                 </motion.h3>
               </div>
 
