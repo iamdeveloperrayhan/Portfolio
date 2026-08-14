@@ -94,7 +94,7 @@ const PROJECTS = [
     id: 'sms-otp-website-clone',
     name: 'SMS OTP Website Clone',
     category: 'Send Mail',
-    tagline: 'Responsive SMS OTP service landing page clone built with HTML, CSS, and JavaScript. Created for frontend practice and portfolio purposes.',
+    tagline: 'Responsive SMS   OTP service landing page clone built with HTML, CSS, and JavaScript. Created for frontend practice and portfolio purposes.',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'jQuery'],
     image: '/projects/sms-otp-website-clone.png',
     year: '2025',

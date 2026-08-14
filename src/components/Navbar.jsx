@@ -175,7 +175,7 @@ export function Navbar() {
             width: 'auto'
           }} />
           </a> */}
-        <span style={{marginRight: '10px', fontFamily: 'Satoshi, system-ui, sans-serif', fontWeight: 800, letterSpacing: '-0.02em', color: '#fff' }}>
+        <span style={{ fontFamily: 'Satoshi, system-ui, sans-serif', fontWeight: 800, letterSpacing: '-0.02em', color: '#fff' }}>
           Rayhan<span style={{ opacity: 0.4, fontWeight: 400 }}>.dev</span>
         </span>
 
