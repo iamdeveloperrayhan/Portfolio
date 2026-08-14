@@ -235,7 +235,7 @@ function CertRow({
 
 /* ── GitHub Activity block ────────────────────────────────────────────────── */
 
-const LEVEL_OPACITY = ['rgba(255,255,255,0.07)', 'rgba(255,255,255,0.22)', 'rgba(255,255,255,0.42)', 'rgba(255,255,255,0.65)', 'rgba(255,255,255,0.88)'];
+const LEVEL_OPACITY = ['#161B22', '#0E4429', '#006D32', '#26A641', '#39D353'];
 function ContribGrid({
   contributions
 }) {
