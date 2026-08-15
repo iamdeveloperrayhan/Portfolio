@@ -109,6 +109,7 @@ export function CustomCursor() {
       const scale = clickingRef.current ? 0.86 : 1;
       ringWrapRef.current.style.transform = `translate3d(${ringPos.current.x}px,${ringPos.current.y}px,0) translate(-50%,-50%) scale(${scale})`;
     }
+    // SSH, Here also has two bug, Need to fix this.
     rafRef.current = requestAnimationFrame(tick);
   }, []);
   useEffect(() => {

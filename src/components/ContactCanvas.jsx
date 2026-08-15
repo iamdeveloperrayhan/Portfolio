@@ -16,6 +16,7 @@ function Constellation() {
   } = useMemo(() => {
     const positions = new Float32Array(COUNT * 3);
     const velocities = new Float32Array(COUNT * 3);
+    // SSH Here is Math import Problem, I need to fix this Bug.
     for (let i = 0; i < COUNT; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 24;
       positions[i * 3 + 1] = (Math.random() - 0.5) * 14;

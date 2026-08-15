@@ -284,6 +284,7 @@ export function About() {
             }}>
               A full stack developer based in Faridpur, Dhaka, Bangladesh — early in my career but self-driven, with 20+ personal and practice projects covering backend systems, REST APIs, and full web applications, UI/UX. I build the whole stack: database schema, backend logic, and the interface on top.
             </p>
+            {/* SSH Catch a Single Proble, need to fix this bug. */}
             <p className="text-black/40 leading-relaxed" style={{
               fontFamily: 'Satoshi, system-ui, sans-serif',
               fontWeight: 400,
