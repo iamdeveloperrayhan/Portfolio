@@ -559,7 +559,7 @@ export function Contact() {
             value: 'Within 24 hours'
           }, {
             label: 'Status',
-            value: 'Available for projects &amp; job',
+            value: 'Available for projects & job',
             pulse: true
           }].map((item, i) => <div key={item.label} className={`py-8 pr-8 ${i > 0 ? 'sm:border-l sm:border-white/8 sm:pl-8 sm:pr-0' : ''}`}>
                 <p className="text-[0.55rem] tracking-[0.22em] uppercase text-white/22 font-medium mb-2" style={{

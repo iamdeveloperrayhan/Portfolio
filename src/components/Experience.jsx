@@ -3,15 +3,100 @@
 import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExperienceFrameSequence } from '@/components/ExperienceFrameSequence';
+import { ExperienceCharacterMobile } from '@/components/ExperienceCharacterMobile';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 const EASE = [0.22, 1, 0.36, 1];
 const EXPERIENCE = [
-  { year: '2026', role: 'Building Full Stack Projects', company: 'Self-Directed / GitHub', bullets: [''], stack: ['Python', 'Django', 'PostgreSQL', 'Next.js', 'React'] },
-  { year: '2025', role: 'Deep-dived Django REST Framework & Auth', company: 'Self-Directed', bullets: [''], stack: ['JWT', 'Django Rest Framework ', 'Authentication'] },
-  { year: '2025', role: 'Learned React, Next.js & Tailwind CSS', company: 'Self-Directed', bullets: [''], stack: ['React', 'Next.js', 'Tailwind'] },
-  { year: '2024', role: 'Started Python & Django', company: 'Self-Directed', bullets: [''], stack: ['Python', 'Django', 'MySQL', 'SQLignt'] },
+  {
+    year: '2026',
+    role: 'Building Full Stack Projects',
+    company: 'Self-Directed / GitHub',
+    bullets: [
+      'Built full-stack web applications using Django, PostgreSQL, React, and Next.js.',
+      'Developed REST APIs, database-driven features, authentication flows, and responsive user interfaces.',
+      'Applied full-stack development practices through hands-on projects and continuous iteration.',
+    ],
+    stack: ['Python', 'Django', 'PostgreSQL', 'Next.js', 'React'],
+  },
+    {
+    year: '2026',
+    role: 'Explored Programming Fundamentals',
+    company: 'Self-Directed',
+    bullets: [
+      'Explored programming fundamentals and developed an interest in software development.',
+      'Practiced problem-solving through basic programming exercises and small projects.',
+      'Built a foundation in logical thinking, debugging, and writing structured code.',
+    ],
+    stack: ['C', 'C++', 'Programming Fundamentals'],
+  },
+  {
+    year: '2025',
+    role: 'Deep-dived Django REST Framework & Auth',
+    company: 'Self-Directed',
+    bullets: [
+      'Built RESTful APIs with Django REST Framework for scalable backend applications.',
+      'Implemented JWT-based authentication, protected routes, and user authorization.',
+      'Worked with serializers, permissions, API views, and authentication workflows.',
+    ],
+    stack: ['JWT', 'Django REST Framework', 'Authentication'],
+  },
+  {
+    year: '2025',
+    role: 'Learned React, Next.js & Tailwind CSS',
+    company: 'Self-Directed',
+    bullets: [
+      'Built interactive and component-based user interfaces using React.',
+      'Developed modern web applications with Next.js and explored routing and rendering features.',
+      'Created responsive and reusable UI designs using Tailwind CSS.',
+    ],
+    stack: ['React', 'Next.js', 'Tailwind'],
+  },
+  {
+    year: '2024',
+    role: 'Started Python & Django',
+    company: 'Self-Directed',
+    bullets: [
+      'Built a strong foundation in Python programming and object-oriented concepts.',
+      'Developed web applications with Django and learned the fundamentals of MVT architecture.',
+      'Worked with relational databases and practiced CRUD operations using MySQL and SQLite.',
+    ],
+    stack: ['Python', 'Django', 'MySQL', 'SQLite'],
+  },
+  {
+    year: '2024',
+    role: 'Explored Git & GitHub',
+    company: 'Self-Directed',
+    bullets: [
+      'Learned Git fundamentals and adopted version control in personal development projects.',
+      'Used GitHub to manage repositories, track changes, and maintain project history.',
+      'Practiced branching, commits, merging, and collaborative development workflows.',
+    ],
+    stack: ['Git', 'GitHub', 'Version Control'],
+  },
+  {
+    year: '2024',
+    role: 'Learned SQL & Database Fundamentals',
+    company: 'Self-Directed',
+    bullets: [
+      'Learned relational database concepts and structured data management.',
+      'Practiced writing SQL queries for creating, reading, updating, and deleting data.',
+      'Connected Django applications with relational databases and worked with models and relationships.',
+    ],
+    stack: ['SQL', 'MySQL', 'SQLite', 'Django ORM'],
+  },
+  {
+    year: '2023',
+    role: 'Started Web Development',
+    company: 'Self-Directed',
+    bullets: [
+      'Started learning the fundamentals of web development and how modern websites are structured.',
+      'Built small practice projects to understand HTML, CSS, and JavaScript fundamentals.',
+      'Developed an interest in creating interactive and responsive web experiences.',
+    ],
+    stack: ['HTML', 'CSS', 'JavaScript'],
+  },
 ];
 const S = {
   label: {
@@ -557,6 +642,7 @@ useEffect(() => {
       <video autoPlay muted loop playsInline preload="auto" poster="/exp_arch_poster.jpg" className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none">
         <source src="/exp_arch_opt.mp4" type="video/mp4" />
       </video>
+      <ExperienceCharacterMobile /> 
       {/* Light atmospheric lift only — text below is auto-inverting (mix-blend-mode:
             difference), so it no longer relies on this tint for legibility. */}
       <div className="absolute inset-0 z-1 pointer-events-none" style={{

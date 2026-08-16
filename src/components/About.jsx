@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 const STATS = [
-  { label: 'Years Learning & Building', target: 1, suffix: '+' },
+  { label: 'Years Learning & Building', target: 2, suffix: '+' },
   { label: 'Projects Built', target: 20, suffix: '+' },
   { label: 'Technologies Used', target: 12, suffix: '+' },
   { label: 'GitHub Repositories', target: 20, suffix: '+' },
@@ -290,7 +290,7 @@ export function About() {
               fontWeight: 400,
               fontSize: 'clamp(1rem, 1.3vw, 1.15rem)'
             }}>
-              Core: Python, Django, Django REST Framework, PostgreSQL, MySQL, SQLite. Comfortable with Node.js and C++ too. On the frontend: React, Next.js, JavaScript, Tailwind CSS, and Bootstrap. I care about writing code that's easy to read a year later.
+              Core: Python, Django, Django REST Framework, PostgreSQL, MySQL, SQLite. Comfortable with Node.js and C++ too. On the frontend: React, Next.js, JavaScript, Tailwind CSS, and Bootstrap. I care about writing code that&apos;s easy to read a year later.
             </p>
 
             <motion.div className="flex gap-4 pt-2" initial={{
