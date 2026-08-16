@@ -120,7 +120,7 @@ export const ExperienceFrameSequence = forwardRef(function ExperienceFrameSequen
   return (
     <div
       ref={containerRef}
-      className="exp-frame-stage absolute inset-0 z-[5] pointer-events-none hidden lg:block overflow-hidden"
+      className="exp-frame-stage absolute inset-0 z-[5] pointer-events-none hidden md:block overflow-hidden"
       aria-hidden="true"
     >
       <canvas ref={canvasRef} className="block w-full h-full" />

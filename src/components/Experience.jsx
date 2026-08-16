@@ -636,13 +636,13 @@ useEffect(() => {
   return <section ref={sectionRef} id="experience" className="w-full border-t border-black/8">
 
     {/* ── Mobile (< lg) ─────────────────────────────────────────── */}
-    <div className="block lg:hidden relative overflow-hidden" style={{
+    <div className="block md:hidden relative overflow-hidden" style={{
       isolation: 'isolate'
     }}>
       <video autoPlay muted loop playsInline preload="auto" poster="/exp_arch_poster.jpg" className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none">
         <source src="/exp_arch_opt.mp4" type="video/mp4" />
       </video>
-      <ExperienceCharacterMobile /> 
+      {/* <ExperienceCharacterMobile />  */}
       {/* Light atmospheric lift only — text below is auto-inverting (mix-blend-mode:
             difference), so it no longer relies on this tint for legibility. */}
       <div className="absolute inset-0 z-1 pointer-events-none" style={{
@@ -657,7 +657,7 @@ useEffect(() => {
     </div>
 
     {/* ── Desktop (≥ lg) ────────────────────────────────────────── */}
-    <div className="hidden lg:block">
+    <div className="hidden md:block">
       {/* Header above the pin — plain white */}
       <div className="bg-white">{Header}</div>
 
