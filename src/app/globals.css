@@ -73,3 +73,21 @@ body {
     padding-top: clamp(5.5rem, 15vw, 7rem);
   }
 }
+.image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+.image-one {
+    z-index: 1;
+}
+.image-two {
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}

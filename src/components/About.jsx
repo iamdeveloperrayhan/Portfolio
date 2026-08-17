@@ -77,6 +77,7 @@ export function About() {
   const sectionRef = useRef(null);
   const statsRef = useRef(null);
   const imageRef = useRef(null);
+  const revealImageRef = useRef(null);
   const lineRef = useRef(null);
   const sectionInView = useInView(sectionRef, {
     once: true,
@@ -119,6 +120,79 @@ export function About() {
       });
     }, sectionRef);
     return () => ctx.revert();
+  }, []);
+  useEffect(() => {
+    const container = imageRef.current;
+    const revealImage = revealImageRef.current;
+
+    if (!container || !revealImage) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let currentX = 0;
+    let currentY = 0;
+
+    let animationFrame;
+
+    const handleMouseMove = (e) => {
+      const rect = container.getBoundingClientRect();
+
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    };
+
+    const handleMouseEnter = (e) => {
+      const rect = container.getBoundingClientRect();
+
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+
+      revealImage.style.opacity = '1';
+    };
+
+    const handleMouseLeave = () => {
+      revealImage.style.opacity = '0';
+    };
+
+    container.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    const animateReveal = () => {
+      currentX += (mouseX - currentX) * 0.12;
+      currentY += (mouseY - currentY) * 0.12;
+
+      revealImage.style.webkitMaskImage = `
+        radial-gradient(
+          circle 100px at ${currentX}px ${currentY}px,
+          black 0%,
+          black 70%,
+          transparent 100%
+        )
+      `;
+
+      revealImage.style.maskImage = `
+        radial-gradient(
+          circle 100px at ${currentX}px ${currentY}px,
+          black 0%,
+          black 70%,
+          transparent 100%
+        )
+      `;
+
+      animationFrame = requestAnimationFrame(animateReveal);
+    };
+
+    animateReveal();
+
+    return () => {
+      container.removeEventListener('mousemove', handleMouseMove);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+
+      cancelAnimationFrame(animationFrame);
+    };
   }, []);
   return <section ref={sectionRef} id="about" className="w-full bg-white border-t border-black/[0.08]">
     <div className="max-w-[1440px] mx-auto px-[clamp(1.25rem,5vw,5rem)] py-[clamp(5rem,10vw,11rem)]">
@@ -317,7 +391,19 @@ export function About() {
 
           {/* Headshot — GSAP clip reveal */}
           <div ref={imageRef} className="relative aspect-3/4 w-full overflow-hidden bg-black/4">
-            <Image src="/me.png" alt="Developer Rayhan — full stack developer" fill className="object-cover object-top grayscale" sizes="(max-width: 1024px) 100vw, 50vw" />
+            <Image
+              src="/me.png"
+              alt="Developer Rayhan — full stack developer"
+              fill
+              className="object-cover object-top grayscale image image-one"
+              sizes="(max-width: 1024px) 100vw, 50vw" />
+            <Image
+              ref={revealImageRef}
+              src="/sage_white.png"
+              alt="Developer Rayhan — full stack developer"
+              fill
+              className="object-cover object-top grayscale image image-two"
+              sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
         </div>
       </div>
