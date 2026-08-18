@@ -90,7 +90,7 @@ function CountUp({
 export function Stack() {
   const sectionRef = useRef(null);
   const charRefs = useRef([]);
-  const words = useMemo(buildFloatWords, []);
+  const words = useMemo(() => buildFloatWords(), []);
 
   // Mouse-repulsion on title chars
   useEffect(() => {
@@ -330,7 +330,7 @@ export function Stack() {
         ease: EASE
       }}>
           {[{
-          target: 1,
+          target: 2,
           label: 'Years'
         }, {
           target: 50,

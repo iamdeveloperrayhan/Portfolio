@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExperienceFrameSequence } from '@/components/ExperienceFrameSequence';
-import { ExperienceCharacterMobile } from '@/components/ExperienceCharacterMobile';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -642,7 +641,6 @@ useEffect(() => {
       <video autoPlay muted loop playsInline preload="auto" poster="/exp_arch_poster.jpg" className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none">
         <source src="/exp_arch_opt.mp4" type="video/mp4" />
       </video>
-      {/* <ExperienceCharacterMobile />  */}
       {/* Light atmospheric lift only — text below is auto-inverting (mix-blend-mode:
             difference), so it no longer relies on this tint for legibility. */}
       <div className="absolute inset-0 z-1 pointer-events-none" style={{
