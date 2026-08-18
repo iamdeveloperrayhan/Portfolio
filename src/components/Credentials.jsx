@@ -728,7 +728,7 @@ export function Credentials() {
             duration: 0.6,
             ease: EASE
           }}>
-              <MagneticBtn href="/resume/Abakwe Carrington.pdf" />
+              <MagneticBtn href="/resume/Developer Rayhan.pdf" />
             </motion.div>
           </div>
 

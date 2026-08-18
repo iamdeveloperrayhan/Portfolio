@@ -558,7 +558,8 @@ export function Contact() {
               fontFamily: 'Satoshi, system-ui, sans-serif',
               fontWeight: 800,
               fontSize: 'clamp(1.8rem, 5.5vw, 7rem)',
-              wordBreak: 'break-all'
+              wordBreak: 'break-all',
+              marginBottom: '15px'
             }}>
                 iamdeveloperrayhan@gmail.com
               </a>
@@ -663,7 +664,7 @@ export function Contact() {
               </motion.div>
 
               {/* Socials */}
-              <motion.div className="flex items-center justify-center gap-3" initial={{
+              <motion.div className="flex items-center justify-center gap-3 flex-wrap" initial={{
               opacity: 0
             }} animate={sectionInView ? {
               opacity: 1
