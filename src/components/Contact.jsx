@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { ContactCanvas } from './ContactCanvas';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const EASE = [0.22, 1, 0.36, 1];
+const wpMessage = "Hello..!👋 Developer Rayhan, How it's going on?";
 const SOCIALS = [{
   label: 'GitHub',
   href: 'https://github.com/iamdeveloperrayhan',
@@ -28,7 +29,50 @@ const SOCIALS = [{
   svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.258 5.63 5.906-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
-}];
+}, {
+  label: 'WhatsApp',
+  href: `https://wa.me/iamdeveloperrayhan?text=${encodeURIComponent(wpMessage)}`,
+  svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2a9.9 9.9 0 0 0-8.55 14.82L2 22l5.3-1.39A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.93 12.01l-.34.56.77 2.76-2.82-.74-.53.31A8 8 0 1 1 12 4zm-3.34 3.2c-.25 0-.64.09-.97.46-.33.36-1.27 1.24-1.27 3.02s1.3 3.5 1.48 3.74c.18.24 2.53 4.06 6.23 5.52.87.34 1.55.55 2.08.7.87.25 1.66.21 2.29.13.7-.1 2.16-.88 2.46-1.73.3-.85.3-1.58.21-1.73-.09-.15-.34-.24-.7-.42-.36-.18-2.16-1.07-2.49-1.19-.33-.12-.57-.18-.81.18-.24.36-.91 1.19-1.12 1.43-.21.24-.42.27-.79.09-.36-.18-1.54-.57-2.93-1.82-1.08-.97-1.81-2.17-2.02-2.54-.21-.36-.02-.56.16-.75.16-.16.36-.42.54-.64.18-.21.24-.36.36-.61.12-.24.06-.46-.03-.64-.09-.18-.82-1.99-1.12-2.72-.3-.72-.6-.61-.82-.61h-.73z"/>
+       </svg>
+}, {
+  label: 'Facebook',
+  href: 'https://facebook.com/iamdeveloperrayhan',
+  svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.5 21v-8h2.75l.4-3h-3.15V8.08c0-.87.24-1.46 1.5-1.46h1.8V3.94c-.31-.04-1.38-.14-2.63-.14-2.6 0-4.38 1.59-4.38 4.5V10H7v3h2.79v8h3.71z"/>
+       </svg>
+}, {
+  label: 'Instagram',
+  href: 'https://instagram.com/iamdeveloperrayhan',
+  svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zm8.9 1.5a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+       </svg>
+}, {
+  label: 'Threads',
+  href: 'https://www.threads.com/@iamdeveloperrayhan',
+  svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.05 2C6.25 2 3 5.57 3 11.77c0 6.39 3.37 10.23 9.16 10.23 5.55 0 8.84-3.05 8.84-7.52 0-3.48-2.08-5.84-5.62-6.54-.16-1.94-1.39-3.2-3.43-3.2-2.13 0-3.48 1.4-3.48 3.55h2.06c0-.98.5-1.55 1.4-1.55.86 0 1.32.56 1.37 1.84-.48-.04-.98-.06-1.49-.06-3.39 0-5.3 1.48-5.3 4.08 0 2.48 1.82 4.05 4.62 4.05 2.43 0 4.17-1.15 4.91-3.15 1.08.58 1.62 1.46 1.62 2.68 0 3.17-2.38 5.04-6.39 5.04-4.44 0-6.74-2.92-6.74-7.46 0-4.92 2.44-7.76 7.54-7.76 3.34 0 5.55 1.3 6.78 3.97l1.83-.91C18.9 3.69 16.13 2 12.05 2zm-.58 8.48c.51 0 1.01.03 1.49.08-.11 1.71-1.04 2.66-2.62 2.66-1.54 0-2.5-.63-2.5-1.64 0-.85.79-1.1 3.63-1.1z"/>
+       </svg>
+}, {
+  label: 'YouTube',
+  href: 'https://www.youtube.com/iamdeveloperrayhan',
+  svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.81zM9.6 15.9V8.1l6.3 3.9-6.3 3.9z"/>
+       </svg>
+}, {
+  label: 'TikTok',
+  href: 'https://www.tiktok.com/iamdeveloperrayhan',
+  svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16.6 3c.4 2.1 1.7 3.7 3.4 4.3v3.2c-1.2-.1-2.4-.5-3.4-1.1v5.7c0 3.7-3 6.6-6.7 6.6S3.2 18.8 3.2 15.1s3-6.6 6.7-6.6c.3 0 .6 0 .9.1v3.4a3.4 3.4 0 0 0-.9-.1 3.2 3.2 0 1 0 3.2 3.2V3h3.5z"/>
+       </svg>
+}, {
+  label: 'Pinterest',
+  href: 'https://www.pinterest.com/iamdeveloperrayhan',
+  svg: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.03 2 11.47c0 3.91 2.2 7.4 5.53 8.7-.08-.74-.15-1.87.03-2.68l1.01-4.28s-.26-.53-.26-1.31c0-1.23.71-2.15 1.6-2.15.75 0 1.11.56 1.11 1.24 0 .76-.48 1.9-.73 2.95-.21.88.44 1.59 1.3 1.59 1.56 0 2.76-1.65 2.76-4.04 0-2.11-1.52-3.58-3.69-3.58-2.51 0-3.98 1.88-3.98 3.82 0 .76.29 1.58.66 2.03.07.08.08.15.06.28l-.25 1.02c-.04.17-.13.2-.31.12-1.15-.54-1.87-2.22-1.87-3.57 0-2.91 2.11-5.58 6.09-5.58 3.2 0 5.69 2.28 5.69 5.32 0 3.18-2.01 5.73-4.8 5.73-.94 0-1.82-.49-2.12-1.08l-.58 2.2c-.21.81-.78 1.82-1.16 2.44.87.27 1.79.42 2.75.42 5.52 0 10-4.03 10-9.47C22 6.03 17.52 2 12 2z"/>
+       </svg>
+}
+];
 
 /* ── Magnetic CTA button ──────────────────────────────────────────────────── */
 function MagneticCTA({
@@ -632,7 +676,7 @@ export function Contact() {
                 label,
                 href,
                 svg
-              }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-9 h-9 border border-white/12 flex items-center justify-center text-white/25 hover:text-white hover:border-white/35 transition-all duration-200">
+              }) => <a key={label} title={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-9 h-9 border border-white/12 flex items-center justify-center text-white/25 hover:text-white hover:border-white/35 transition-all duration-200">
                     {svg}
                   </a>)}
               </motion.div>

@@ -476,7 +476,7 @@ export function Credentials() {
     margin: '-8%'
   });
   const [hoveredCert, setHoveredCert] = useState(null);
-  const floatItems = useMemo(buildFloatItems, []);
+  const floatItems = useMemo(() => buildFloatItems(), []);
   useEffect(() => {
     if (!sectionRef.current || !lineRef.current) return;
     const ctx = gsap.context(() => {
@@ -655,7 +655,7 @@ export function Credentials() {
               delay: 0.35,
               duration: 0.5
             }}>
-                Resume · PDF · 2025
+                Resume · PDF · 2026
               </motion.span>
 
               <div className="overflow-hidden">
@@ -691,12 +691,12 @@ export function Credentials() {
               duration: 0.55,
               ease: EASE
             }}>
-               Software engineer &amp; UI/ UX Developer, Systems Architect — 1+ years · Remote
+               Software engineer &amp; UI/ UX Developer, Systems Architect — 2+ years · Remote
               </motion.p>
 
               {/* Stack tags */}
               <div className="flex flex-wrap gap-2 mt-1">
-                {['AWS', 'Docker', 'Go', 'Django', 'PostgreSQL', 'Redis'].map((tag, i) => <motion.span key={tag} className="border border-white/12 text-white/28 text-[0.52rem] tracking-[0.16em] uppercase px-2.5 py-1" style={{
+                {['Python', 'Docker', 'Django', 'PostgreSQL', 'Redis', 'C++'].map((tag, i) => <motion.span key={tag} className="border border-white/12 text-white/28 text-[0.52rem] tracking-[0.16em] uppercase px-2.5 py-1" style={{
                 fontFamily: 'Satoshi, system-ui, sans-serif'
               }} initial={{
                 opacity: 0,
