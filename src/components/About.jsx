@@ -399,10 +399,10 @@ export function About() {
               sizes="(max-width: 1024px) 100vw, 50vw" />
             <Image
               ref={revealImageRef}
-              src="/sage_white.png"
+              src="/me_hover.png"
               alt="Developer Rayhan — full stack developer"
               fill
-              className="object-cover object-top grayscale image image-two"
+              className="object-cover object-top image image-two"
               sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
         </div>
