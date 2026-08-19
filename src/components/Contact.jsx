@@ -660,7 +660,7 @@ export function Contact() {
               delay: 0.6,
               ease: EASE
             }}>
-                <Image src="/sage/sage_prim_white.png" alt="Developer Rayhan" width={130} height={32} className="opacity-40 hover:opacity-70 transition-opacity duration-300" />
+                <Image src="/sage/sage_logo.png" alt="Developer Rayhan" width={130} height={32} className="opacity-40 hover:opacity-70 transition-opacity duration-300" />
               </motion.div>
 
               {/* Socials */}
