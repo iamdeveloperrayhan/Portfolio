@@ -783,7 +783,7 @@ export function Contact() {
             <p className="text-[0.55rem] tracking-[0.14em] uppercase text-white/12 text-center sm:text-right" style={{
               fontFamily: 'Satoshi, system-ui, sans-serif'
             }}>
-                Designed &amp; Developed by Carrington
+                Designed &amp; Developed by Developer Rayhan
               </p>
             </motion.div>
           </div>  {/* end z-10 wrapper */}

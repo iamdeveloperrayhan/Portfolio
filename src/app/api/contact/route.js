@@ -23,7 +23,7 @@ function emailTemplate({
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Message — Abakwe Carrington</title>
+  <title>New Message — Code Vaiya</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -141,7 +141,7 @@ function emailTemplate({
                   </td>
                   <td align="right">
                     <p style="font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.18);">
-                      abakwecarrington@gmail.com
+                      iamdeveloperrayhan@gmail.com
                     </p>
                   </td>
                 </tr>
@@ -184,8 +184,8 @@ export async function POST(req) {
     const {
       error
     } = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: 'abakwecarrington@gmail.com',
+      from: 'Portfolio Contact <contact@iamdeveloperrayhan.dev>',
+      to: 'iamdeveloperrayhan@gmail.com',
       replyTo: email,
       subject: `New message from ${name} — Portfolio`,
       html: emailTemplate({

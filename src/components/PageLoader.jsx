@@ -134,11 +134,15 @@ export function PageLoader({
       <div ref={logoRef} className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none gap-5" style={{
       opacity: 0
     }}>
-        <Image src="/sage/sage_prim_white.png" alt="Cybersage" width={520} height={140} priority style={{
-        height: 'clamp(60px, 12vw, 130px)',
-        width: 'auto',
-        objectFit: 'contain',
-        opacity: 0.88
+        <Image
+        src="/sage/sage_loading.gif"
+        alt="Code Vaiya" width={520}
+        height={140} priority style={{
+          height: 'clamp(60px, 12vw, 130px)',
+          width: 'auto',
+          objectFit: 'contain',
+          opacity: 0.88,
+          borderRadius: '20px'
       }} />
 
         {/* Loading indicator below logo */}

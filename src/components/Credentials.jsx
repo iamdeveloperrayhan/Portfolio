@@ -53,19 +53,20 @@ const CERTIFICATIONS = [{
   title: 'Full Stack Developer',
   issuer: 'Ostad',
   year: '2026',
-  file: '/certificates/Carrington Abakwe - 2025-08-04 - Full stack engineering Certificate (IBT Learning).pdf'
+  file: ''
 }, {
   num: '02',
   title: 'UI/UX Developer',
   issuer: 'Ostad',
   year: '2024',
-  file: '/certificates/Abakwe Carrington - Web application development (Moat Academy).jpeg'
+  file: ''
 }, {
   num: '03',
   title: 'Web Development Internship',
   issuer: 'Ostad',
   year: '2025',
-  file: '/certificates/Zidio Development - Web Devlopment Internship.jpeg'
+  file: ''
+  // file: '/certificates/Zidio Development - Web Devlopment Internship.jpeg'
 }];
 
 /* ── Magnetic download button ─────────────────────────────────────────────── */
