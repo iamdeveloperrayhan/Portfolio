@@ -45,7 +45,7 @@ function emailTemplate({
                   <td>
                     <img
                       src="${LOGO_HORIZONTAL}"
-                      alt="Cybersage"
+                      alt="Developer Rayhan"
                       width="140"
                       style="display:block; height:auto;"
                     />
@@ -134,7 +134,7 @@ function emailTemplate({
                   <td>
                     <img
                       src="${LOGO_ICON}"
-                      alt=""
+                      alt="Developer Rayhan"
                       width="28"
                       style="display:block; height:auto; opacity:0.3;"
                     />
