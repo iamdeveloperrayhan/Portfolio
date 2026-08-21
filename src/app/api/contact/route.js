@@ -11,8 +11,8 @@ function readLogoB64(filename) {
     return '';
   }
 }
-const LOGO_HORIZONTAL = readLogoB64('cybersage_horizontal.png');
-const LOGO_ICON = readLogoB64('cybersage_icon.png');
+const LOGO_HORIZONTAL = readLogoB64('sage_logo.png');
+const LOGO_ICON = readLogoB64('sage_logo.png');
 function emailTemplate({
   name,
   email,
@@ -52,7 +52,7 @@ function emailTemplate({
                   </td>
                   <td align="right">
                     <span style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.25); font-weight:500;">
-                      Portfolio Inquiry
+                      Portfolio 
                     </span>
                   </td>
                 </tr>
@@ -153,8 +153,8 @@ function emailTemplate({
           <tr>
             <td style="padding-top: 20px;">
               <p style="font-size:10px; letter-spacing:0.12em; color:rgba(255,255,255,0.12); line-height:1.8;">
-                This message was submitted via the contact form at cybersage.dev<br/>
-                © 2026 Abakwe Carrington · All rights reserved
+                This message was submitted via the contact form at iamdeveloperrayhan.dev<br/>
+                © 2026 Developer Rayhan · All rights reserved
               </p>
             </td>
           </tr>
@@ -184,7 +184,7 @@ export async function POST(req) {
     const {
       error
     } = await resend.emails.send({
-      from: 'Portfolio Contact <contact@iamdeveloperrayhan.dev>',
+      from: 'Portfolio Contact <onboarding@resend.dev>',
       to: 'iamdeveloperrayhan@gmail.com',
       replyTo: email,
       subject: `New message from ${name} — Portfolio`,
